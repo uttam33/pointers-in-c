@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+void f1(int,int);
+void f2(int*,int*);
+int main()
+{
+	int a=4,b=5,c=6;
+	f1(a,c);
+	f2(&b,&c);
+	printf("%d\t",c-a-b);
+	return 0;
+	getch();
+}
+void f1( int a,int b)
+{
+	int c;
+	c=a;
+	a=b;
+	b=c;
+}
+void f2(int *a,int*b)
+{
+	int c;
+	c=*a;
+	*a=*b;
+	*b=c;
+}
+
